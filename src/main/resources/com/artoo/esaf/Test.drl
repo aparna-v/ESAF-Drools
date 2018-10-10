@@ -1,2 +1,15 @@
 package com.artoo.esaf;
 
+import com.artoo.esaf.Input;
+import com.artoo.esaf.TileView;
+
+rule "test"
+ruleflow-group "test"
+
+    when
+      $tile: TileView()
+        
+    then
+       $tile.setLoan_type("hyl"); 
+    	
+end
