@@ -6,6 +6,7 @@ org.jbpm.workflow.core.node
 org.kie.api.builder.model
 org.jbpm.ruleflow.core
 com.squareup.moshi.internal
+org.kie.api.remote
 org.kie.api.runtime.manager.audit
 org.kie.api.runtime.process
 org.kie.api.definition.rule
@@ -18,6 +19,7 @@ org.jbpm.ruleflow.core.factory
 org.kie.api.event.process
 org.kie.api.management
 org.jbpm.workflow.instance.node
+org.kie.api.runtime.builder
 org.kie.api.concurrent
 com.squareup.moshi
 org.jbpm.process
@@ -31,6 +33,7 @@ org.jbpm.process.instance.context.exception
 com.artoo.model.app
 bin.com.artoo.model
 org.jbpm.ruleflow.core.validation
+org.kie.api.persistence
 org.kie.api.task.model
 org.jbpm.process.core.context.exception
 com.artoo.utils
@@ -49,6 +52,7 @@ org.kie.api.definition
 org.jbpm.workflow.core.impl
 org.jbpm.workflow.instance.impl
 org.jbpm.process.core.context.exclusive
+org.kie.api.runtime.query
 bin.com.artoo.utils
 org.jbpm.process.core.context.variable
 org.jbpm.process.instance.impl.demo
@@ -71,9 +75,11 @@ org.jbpm.process.instance.impl
 org.jbpm.process.instance
 org.kie.api.task
 org.jbpm.process.instance.context.swimlane
+org.kie.api.executor
 org.kie.api.definition.process
 org.jbpm.process.instance.impl.humantask
 org.jbpm.process.core.context.swimlane
+org.kie.api.event.kiescanner
 org.jbpm.process.core.validation
 org.kie.api.conf
 com.artoo
