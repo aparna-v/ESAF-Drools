@@ -1,15 +1,14 @@
 package com.artoo.esaf;
 
-import org.kie.api.runtime.process.WorkflowProcessInstance;
+
 import com.artoo.esaf.Input;
 
 rule "test"
 ruleflow-group "test"
 
     when
-        process: WorkflowProcessInstance()
+        
     then
-        process.setVariable("type","hyl");
         
     	
 end
