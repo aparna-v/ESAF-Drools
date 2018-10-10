@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.artoo.esaf</groupId>
   <artifactId>ESAF</artifactId>
-  <version>1.0.4_Alpha</version>
+  <version>1.0.5_Alpha</version>
   <packaging>kjar</packaging>
   <name>ESAF</name>
   <description></description>
