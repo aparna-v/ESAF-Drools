@@ -1,5 +1,6 @@
 package com.artoo.esaf;
 
+import org.kie.api.runtime.process.WorkflowProcessInstance;
 import com.artoo.esaf.Input;
 import com.artoo.esaf.TileView;
 
@@ -7,9 +8,10 @@ rule "test"
 ruleflow-group "test"
 
     when
-      $tile: TileView()
+        $process: WorkflowProcessInstance()
         
     then
-       $tile.setLoan_type("hyl"); 
-    	update($tile);
+        TileView  tile = (TileView) $process.getVariable("tile");
+        tile.setLoan_type("hyl"); 
+        $process.setVariable("tile", tile);
 end
