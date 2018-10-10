@@ -10,6 +10,6 @@ ruleflow-group "test"
       $tile: TileView()
         
     then
-        
+       $tile.setLoan_type("hyl"); 
     	
 end
