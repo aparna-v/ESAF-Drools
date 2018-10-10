@@ -6,12 +6,24 @@ package com.artoo.esaf;
 
 public class Input implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Input() {
-    }
+	@org.kie.api.definition.type.Label(value = "docId")
+	private java.lang.String docId;
 
+	public Input() {
+	}
 
+	public java.lang.String getDocId() {
+		return this.docId;
+	}
 
+	public void setDocId(java.lang.String docId) {
+		this.docId = docId;
+	}
+
+	public Input(java.lang.String docId) {
+		this.docId = docId;
+	}
 
 }
