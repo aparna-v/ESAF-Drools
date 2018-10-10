@@ -1,5 +1,6 @@
 package com.artoo.esaf;
 
+import org.drools.runtime.process.WorkflowProcessInstance;
 import com.artoo.esaf.Input;
 
 rule "test"
