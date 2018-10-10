@@ -11,6 +11,7 @@ ruleflow-group "test"
         $process: WorkflowProcessInstance()
         
     then
+        System.out.println("rule executing");
         TileView  tile = (TileView) $process.getVariable("tile");
         tile.setLoan_type("hyl"); 
         $process.setVariable("tile", tile);
