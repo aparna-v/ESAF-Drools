@@ -11,5 +11,5 @@ ruleflow-group "test"
         
     then
        $tile.setLoan_type("hyl"); 
-    	
+    	update($tile);
 end
