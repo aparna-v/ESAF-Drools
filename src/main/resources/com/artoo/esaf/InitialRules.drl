@@ -4,5 +4,47 @@ import com.artoo.esaf.Input;
 import com.artoo.esaf.TileView;
 import com.artoo.model.app.*;
 
+rule "Fetch application details"
+ruleflow-group "fetch"
+    when
+        $tile: 					TileView()
+            
+        $loan: 					Loan() 												from $app.loan
+        $building_asset:		Loan.LoanProposal.Asset.Details(type == 'building') from $loan.proposal.asset.details
+        $pa: 					Entity(type == "person_applicant") 					from $app.entities
+        $pa_address_details: 	Address.Details(type == "present_home") 			from $pa.address.details
+        $pa_employment_details: EmploymentHistory.Details() 						from $pa.employment_history.details
+        $observation: 			Observation() 										from $app.observation
+        $vintage_esaf: 			Observation.Details(tag == 'vintage_esaf') 			from $observation.details
+        $business_location: 	Observation.Details(tag == 'business_location') 	from $observation.details
+        $house_pledging: 		Observation.Details(tag == 'house_pledging') 		from $observation.details
+        $business_group: 		Observation.Details(tag == 'business_group') 		from $observation.details
+        $borrower_history: 		Observation.Details(tag == 'borrower_history') 		from $observation.details
+        $property_value: 		Observation.Details(tag == 'property_value') 		from $observation.details
+        $property_pledged: 		Observation.Details(tag == 'property_pledged') 		from $observation.details
+        $ba:					Entity(type == "business") 							from $app.entities
+        $ba_profile_extra:		Profile.Extra()										from $ba.profile.extra
+        $summary:				Summary()											from $app.summary
+        $summary_extra:			Summary.Extra()										from $summary.extra
 
-
+    then
+        $tile.setLoan_type($loan.getType());
+        $tile.setCollateral_asset_age($building_asset.getAge());
+        $tile.setCollateral_asset_type($building_asset.getArea_type());
+        $tile.setPerson_applicant_present_home_address_years($pa_address_details.getYears_at_address());
+        $tile.setPerson_applicant_years_of_experience($pa_employment_details.getDuration());
+        $tile.setVintage_esaf($vintage_esaf.getValue());
+        $tile.setBusiness_location($business_location.getValue());
+        $tile.setHouse_pledging($house_pledging.getValue());
+        $tile.setBusiness_group($business_group.getValue());
+        $tile.setBorrower_history($borrower_history.getValue());
+        $tile.setProperty_value($property_value.getValue());
+        $tile.setProperty_pledged($property_pledged.getValue());
+        $tile.setExperience_in_business($ba_profile_extra.getExperience_in_business());
+        $tile.setLtv($summary.getAmount_to_asset_value());
+        $tile.setFoir($summary_extra.getFoir());       
+            
+        update($tile);
+end
+    
+    
