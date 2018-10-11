@@ -17,17 +17,6 @@ ruleflow-group "test"
 end
 
 
-rule "test 2"
-ruleflow-group "test"
-
-    when
-        $input: Input()
-        
-    then
-        System.out.println("rule executing 2 "+ $input.getDocId());
-end
-
-
 rule "test 3"
 ruleflow-group "test"
 
