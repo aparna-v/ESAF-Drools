@@ -10,7 +10,7 @@ rule "LAPSalaried - Vintage with esaf very long"
     when
         $tile : TileView(vintage_esaf == "very_long")
     then
-        Ops.calc(out, 10.0f, 10.0f, Ops.BORROWER_CHARC);
+        Ops.calc(out, 10.0d, 10.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -19,7 +19,7 @@ rule "LAPSalaried - Vintage with esaf long"
     when
         $tile : TileView(vintage_esaf == "long")
     then
-        Ops.calc(out, 8.0f, 10.0f, Ops.BORROWER_CHARC);
+        Ops.calc(out, 8.0d, 10.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -28,7 +28,7 @@ rule "LAPSalaried - Vintage with esaf medium"
     when
        $tile : TileView(vintage_esaf == "medium")
     then
-        Ops.calc(out, 6.0f, 10.0f, Ops.BORROWER_CHARC);
+        Ops.calc(out, 6.0d, 10.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -37,6 +37,6 @@ rule "LAPSalaried - Vintage with esaf short"
     when
         $tile : TileView(vintage_esaf == "short")
     then
-        Ops.calc(out, 4.0f, 10.0f, Ops.BORROWER_CHARC);
+        Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
         
 end
