@@ -44,3 +44,17 @@ ruleflow-group "lap_salaried"
         Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
         
 end
+
+
+rule "LAPSalaried - Year of stay in current address >5 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_present_home_address_years == "short")
+    then
+        Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+
+
