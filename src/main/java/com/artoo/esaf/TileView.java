@@ -23,7 +23,7 @@ public class TileView implements java.io.Serializable {
 	@org.kie.api.definition.type.Label(value = "foir")
 	private java.math.BigDecimal foir;
 	@org.kie.api.definition.type.Label(value = "ltv")
-	private java.math.BigDecimal ltv;
+	private java.lang.Double ltv;
 	@org.kie.api.definition.type.Label(value = "vintage_esaf")
 	private java.lang.String vintage_esaf;
 	@org.kie.api.definition.type.Label(value = "business_location")
@@ -101,11 +101,11 @@ public class TileView implements java.io.Serializable {
 		this.foir = foir;
 	}
 
-	public java.math.BigDecimal getLtv() {
+	public java.lang.Double getLtv() {
 		return this.ltv;
 	}
 
-	public void setLtv(java.math.BigDecimal ltv) {
+	public void setLtv(java.lang.Double ltv) {
 		this.ltv = ltv;
 	}
 
