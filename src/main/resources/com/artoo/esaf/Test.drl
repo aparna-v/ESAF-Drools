@@ -4,29 +4,18 @@ import org.kie.api.runtime.process.WorkflowProcessInstance;
 import com.artoo.esaf.Input;
 import com.artoo.esaf.TileView;
 
+
 rule "test"
-ruleflow-group "test"
-
-    when
-        $tile: TileView()
-        
-    then
-        System.out.println("rule executing");
-        $tile.setLoan_type("hyl"); 
-        System.out.println("rule executed");
-end
-
-
-rule "test 3"
 ruleflow-group "test"
 
     when
         $process: WorkflowProcessInstance()
         
     then
-        System.out.println("rule executing 1");
+        TileView tile = new TileView();
+        tile.setLoan_type("hyl");
         WorkflowProcessInstance $p = (WorkflowProcessInstance)kcontext.getKieRuntime().getProcessInstance($process.getId()); //casting to WorkflowProcessInstance is essential
-        $p.setVariable("tile", new TileView() );
+        $p.setVariable("tile", tile );
         retract($process);
-
+        System.out.println("test");
 end
