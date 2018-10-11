@@ -9,13 +9,11 @@ rule "test"
 ruleflow-group "test"
 
     when
-        $process: WorkflowProcessInstance()
+        $tile: TileView()
         
     then
-        TileView tile = new TileView();
-        tile.setLoan_type("hyl");
-        WorkflowProcessInstance $p = (WorkflowProcessInstance)kcontext.getKieRuntime().getProcessInstance($process.getId()); //casting to WorkflowProcessInstance is essential
-        $p.setVariable("tile", tile );
-        retract($process);
-        System.out.println("test");
+        
+        $tile.setLoan_type("hyl");
+        update($tile);
+        System.out.println("test"+ $tile.getLoan_type());
 end
