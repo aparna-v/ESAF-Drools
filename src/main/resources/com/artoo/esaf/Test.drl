@@ -16,19 +16,6 @@ ruleflow-group "test"
         System.out.println("rule executed");
 end
 
-rule "test 1"
-ruleflow-group "test"
-
-    when
-        $process: WorkflowProcessInstance()
-        
-    then
-        System.out.println("rule executing 1");
-        TileView  tile = (TileView) $process.getVariable("tile");
-        tile.setLoan_type("hyl"); 
-        $process.setVariable("tile", tile);
-        System.out.println("rule executed 1");
-end
 
 rule "test 2"
 ruleflow-group "test"
