@@ -3,9 +3,24 @@ package com.artoo.esaf;
 import com.artoo.esaf.Input;
 import com.artoo.esaf.TileView;
 import com.artoo.model.app.*;
+import com.artoo.utils.NetworkCall;
 
 rule "Fetch application details"
 ruleflow-group "fetch"
+    when
+        $input: Input()
+    then
+    	String url = "http://10.1.0.11:5984/esaf/" + $input.getDocId();
+		App app = NetworkCall.get(url, App.class);
+		if(app != null){
+			insert(app);
+			System.out.println(app.toString());
+		}
+    
+end
+
+rule "tiling application details"
+ruleflow-group "tiling"
     when
         $tile: 					TileView()
         $app:                   App()  
@@ -43,8 +58,8 @@ ruleflow-group "fetch"
         $tile.setExperience_in_business($ba_profile_extra.getExperience_in_business());
         $tile.setLtv($summary.getAmount_to_asset_value());
         $tile.setFoir($summary_extra.getFoir());       
-            
         update($tile);
+        System.out.println($tile.toString());
 end
     
     
