@@ -29,3 +29,13 @@ ruleflow-group "test"
         $process.setVariable("tile", tile);
         System.out.println("rule executed 1");
 end
+
+rule "test 2"
+ruleflow-group "test"
+
+    when
+        $input: Input()
+        
+    then
+        System.out.println("rule executing 2 "+ $input.getDocId());
+end
