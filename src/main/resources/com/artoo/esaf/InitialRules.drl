@@ -8,7 +8,7 @@ rule "Fetch application details"
 ruleflow-group "fetch"
     when
         $tile: 					TileView()
-            
+        $app:                   App()  
         $loan: 					Loan() 												from $app.loan
         $building_asset:		Loan.LoanProposal.Asset.Details(type == 'building') from $loan.proposal.asset.details
         $pa: 					Entity(type == "person_applicant") 					from $app.entities
