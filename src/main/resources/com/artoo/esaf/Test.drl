@@ -39,3 +39,18 @@ ruleflow-group "test"
     then
         System.out.println("rule executing 2 "+ $input.getDocId());
 end
+
+
+rule "test 3"
+ruleflow-group "test"
+
+    when
+        $process: WorkflowProcessInstance()
+        
+    then
+        System.out.println("rule executing 1");
+        WorkflowProcessInstance $p = (WorkflowProcessInstance)kcontext.getKieRuntime().getProcessInstance($process.getId()); //casting to WorkflowProcessInstance is essential
+        $p.setVariable("tile", new TileView() );
+        retract($process);
+
+end
