@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_gvCqwM0jEeiE7JEbc2jPig" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Process Modeler" exporterVersion="1.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_y98EIM0jEeiE7JEbc2jPig" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Process Modeler" exporterVersion="1.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_tileItem" structureRef="com.artoo.esaf.TileView"/>
   <bpmn2:itemDefinition id="__8D85925C-3491-4722-AB89-00A6EC6A6203_tileInputXItem" structureRef="com.artoo.esaf.TileView"/>
   <bpmn2:itemDefinition id="__8D85925C-3491-4722-AB89-00A6EC6A6203_tileOutputXItem" structureRef="com.artoo.esaf.TileView"/>
@@ -19,7 +19,7 @@
           <drools:metaValue><![CDATA[Business Rule Task]]></drools:metaValue>
         </drools:metaData>
         <drools:onEntry-script scriptFormat="http://www.java.com/java">
-          <drools:script><![CDATA[ksession.startProcess("title", new com.artoo.esaf.TileVew());
+          <drools:script><![CDATA[kcontext.getKieRuntime().insert(kcontext.getProcessInstance());
 System.out.println("on Entry Action");]]></drools:script>
         </drools:onEntry-script>
         <drools:onExit-script scriptFormat="http://www.java.com/java">
@@ -28,21 +28,21 @@ System.out.println("on Entry Action");]]></drools:script>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_B5195493-443D-4B1A-BC9A-3B73AAAA99B2</bpmn2:incoming>
       <bpmn2:outgoing>_E375C709-C979-4F26-B879-7897141C1280</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_gvCqwc0jEeiE7JEbc2jPig">
+      <bpmn2:ioSpecification id="_y98EIc0jEeiE7JEbc2jPig">
         <bpmn2:dataInput id="_8D85925C-3491-4722-AB89-00A6EC6A6203_tileInputX" drools:dtype="com.artoo.esaf.TileView" itemSubjectRef="__8D85925C-3491-4722-AB89-00A6EC6A6203_tileInputXItem" name="tile"/>
         <bpmn2:dataOutput id="_8D85925C-3491-4722-AB89-00A6EC6A6203_tileOutputX" drools:dtype="com.artoo.esaf.TileView" itemSubjectRef="__8D85925C-3491-4722-AB89-00A6EC6A6203_tileOutputXItem" name="tile"/>
-        <bpmn2:inputSet id="_gvCqws0jEeiE7JEbc2jPig">
+        <bpmn2:inputSet id="_y98EIs0jEeiE7JEbc2jPig">
           <bpmn2:dataInputRefs>_8D85925C-3491-4722-AB89-00A6EC6A6203_tileInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_gvCqw80jEeiE7JEbc2jPig">
+        <bpmn2:outputSet id="_y98EI80jEeiE7JEbc2jPig">
           <bpmn2:dataOutputRefs>_8D85925C-3491-4722-AB89-00A6EC6A6203_tileOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_gvCqxM0jEeiE7JEbc2jPig">
+      <bpmn2:dataInputAssociation id="_y98EJM0jEeiE7JEbc2jPig">
         <bpmn2:sourceRef>tile</bpmn2:sourceRef>
         <bpmn2:targetRef>_8D85925C-3491-4722-AB89-00A6EC6A6203_tileInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_gvCqxc0jEeiE7JEbc2jPig">
+      <bpmn2:dataOutputAssociation id="_y98EJc0jEeiE7JEbc2jPig">
         <bpmn2:sourceRef>_8D85925C-3491-4722-AB89-00A6EC6A6203_tileOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>tile</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
@@ -86,15 +86,15 @@ System.out.println("on Entry Action");]]></drools:script>
       <bpmn2:incoming>_8018DB35-CDC9-46E8-BFDA-B419612AF58B</bpmn2:incoming>
     </bpmn2:endEvent>
     <bpmn2:sequenceFlow id="_8018DB35-CDC9-46E8-BFDA-B419612AF58B" sourceRef="_8198949F-1973-4C82-BF8F-1249ECF02F95" targetRef="_E6376CA9-3ADA-4AF3-AAEB-169D4BD39220">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_gvCqxs0jEeiE7JEbc2jPig"></bpmn2:conditionExpression>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_y98EJs0jEeiE7JEbc2jPig"></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_1B2F9026-2913-49A1-BD02-046072A2FA89" sourceRef="_3B3BCB1B-7037-4E86-BDCC-44E6F9E83ABC" targetRef="_5EC12162-A866-426F-B13C-B29A7EEA0754">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_gvCqx80jEeiE7JEbc2jPig" language="http://www.java.com/java"><![CDATA[System.out.println("Task 2");
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_y98EJ80jEeiE7JEbc2jPig" language="http://www.java.com/java"><![CDATA[System.out.println("Task 2");
 System.out.println("Task 2 " +tile.getLoan_type());
 return tile.getLoan_type().equals("no");]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:sequenceFlow id="_C8A5A738-0E8D-4115-80D5-D0BE165113AC" sourceRef="_3B3BCB1B-7037-4E86-BDCC-44E6F9E83ABC" targetRef="_04B552DB-8C1E-42AB-B021-DEC8F2FC9707">
-      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_gvCqyM0jEeiE7JEbc2jPig" language="http://www.java.com/java"><![CDATA[System.out.println("Task 1");
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_y98EKM0jEeiE7JEbc2jPig" language="http://www.java.com/java"><![CDATA[System.out.println("Task 1");
 System.out.println("Task 1 " +tile.getLoan_type());
 return tile.getLoan_type().equals("hyl");]]></bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
@@ -103,84 +103,72 @@ return tile.getLoan_type().equals("hyl");]]></bpmn2:conditionExpression>
     <bpmn2:sequenceFlow id="_F9604EE7-B29F-41E8-A8A2-4F851C83ED23" sourceRef="_5EC12162-A866-426F-B13C-B29A7EEA0754" targetRef="_8198949F-1973-4C82-BF8F-1249ECF02F95"/>
     <bpmn2:sequenceFlow id="_E375C709-C979-4F26-B879-7897141C1280" sourceRef="_8D85925C-3491-4722-AB89-00A6EC6A6203" targetRef="_3B3BCB1B-7037-4E86-BDCC-44E6F9E83ABC"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_gvCqyc0jEeiE7JEbc2jPig">
-    <bpmndi:BPMNPlane id="_gvCqys0jEeiE7JEbc2jPig" bpmnElement="ESAF.ScoringProcess">
-      <bpmndi:BPMNShape id="_gvCqy80jEeiE7JEbc2jPig" bpmnElement="_9ABAEF0E-9932-4D15-9138-B3AB361E3B8A">
+  <bpmndi:BPMNDiagram id="_y98EKc0jEeiE7JEbc2jPig">
+    <bpmndi:BPMNPlane id="_y98EKs0jEeiE7JEbc2jPig" bpmnElement="ESAF.ScoringProcess">
+      <bpmndi:BPMNShape id="_y98EK80jEeiE7JEbc2jPig" bpmnElement="_9ABAEF0E-9932-4D15-9138-B3AB361E3B8A">
         <dc:Bounds height="56.0" width="56.0" x="100.0" y="194.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_gvCqzM0jEeiE7JEbc2jPig" bpmnElement="_8D85925C-3491-4722-AB89-00A6EC6A6203">
+      <bpmndi:BPMNShape id="_y98ELM0jEeiE7JEbc2jPig" bpmnElement="_8D85925C-3491-4722-AB89-00A6EC6A6203">
         <dc:Bounds height="102.0" width="154.0" x="221.0" y="171.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_gvCqzc0jEeiE7JEbc2jPig" bpmnElement="_3B3BCB1B-7037-4E86-BDCC-44E6F9E83ABC">
+      <bpmndi:BPMNShape id="_y98ELc0jEeiE7JEbc2jPig" bpmnElement="_3B3BCB1B-7037-4E86-BDCC-44E6F9E83ABC">
         <dc:Bounds height="56.0" width="56.0" x="477.0" y="194.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_gvCqzs0jEeiE7JEbc2jPig" bpmnElement="_04B552DB-8C1E-42AB-B021-DEC8F2FC9707">
+      <bpmndi:BPMNShape id="_y98ELs0jEeiE7JEbc2jPig" bpmnElement="_04B552DB-8C1E-42AB-B021-DEC8F2FC9707">
         <dc:Bounds height="102.0" width="154.0" x="635.0" y="43.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_gvCqz80jEeiE7JEbc2jPig" bpmnElement="_5EC12162-A866-426F-B13C-B29A7EEA0754">
+      <bpmndi:BPMNShape id="_y98EL80jEeiE7JEbc2jPig" bpmnElement="_5EC12162-A866-426F-B13C-B29A7EEA0754">
         <dc:Bounds height="102.0" width="154.0" x="635.0" y="299.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_gvCq0M0jEeiE7JEbc2jPig" bpmnElement="_8198949F-1973-4C82-BF8F-1249ECF02F95">
+      <bpmndi:BPMNShape id="_y98EMM0jEeiE7JEbc2jPig" bpmnElement="_8198949F-1973-4C82-BF8F-1249ECF02F95">
         <dc:Bounds height="56.0" width="56.0" x="882.0" y="203.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_gvDR0M0jEeiE7JEbc2jPig" bpmnElement="_E6376CA9-3ADA-4AF3-AAEB-169D4BD39220">
+      <bpmndi:BPMNShape id="_y98EMc0jEeiE7JEbc2jPig" bpmnElement="_E6376CA9-3ADA-4AF3-AAEB-169D4BD39220">
         <dc:Bounds height="56.0" width="56.0" x="1096.0" y="203.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_gvDR0c0jEeiE7JEbc2jPig" bpmnElement="_8018DB35-CDC9-46E8-BFDA-B419612AF58B" sourceElement="_gvCq0M0jEeiE7JEbc2jPig" targetElement="_gvDR0M0jEeiE7JEbc2jPig">
+      <bpmndi:BPMNEdge id="_y98EMs0jEeiE7JEbc2jPig" bpmnElement="_8018DB35-CDC9-46E8-BFDA-B419612AF58B" sourceElement="_y98EMM0jEeiE7JEbc2jPig" targetElement="_y98EMc0jEeiE7JEbc2jPig">
         <di:waypoint xsi:type="dc:Point" x="910.0" y="231.0"/>
         <di:waypoint xsi:type="dc:Point" x="1124.0" y="231.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_gvDR0s0jEeiE7JEbc2jPig" bpmnElement="_1B2F9026-2913-49A1-BD02-046072A2FA89" sourceElement="_gvCqzc0jEeiE7JEbc2jPig" targetElement="_gvCqz80jEeiE7JEbc2jPig">
+      <bpmndi:BPMNEdge id="_y98EM80jEeiE7JEbc2jPig" bpmnElement="_1B2F9026-2913-49A1-BD02-046072A2FA89" sourceElement="_y98ELc0jEeiE7JEbc2jPig" targetElement="_y98EL80jEeiE7JEbc2jPig">
         <di:waypoint xsi:type="dc:Point" x="505.0" y="222.0"/>
         <di:waypoint xsi:type="dc:Point" x="712.0" y="350.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_gvDR080jEeiE7JEbc2jPig" bpmnElement="_C8A5A738-0E8D-4115-80D5-D0BE165113AC" sourceElement="_gvCqzc0jEeiE7JEbc2jPig" targetElement="_gvCqzs0jEeiE7JEbc2jPig">
+      <bpmndi:BPMNEdge id="_y98ENM0jEeiE7JEbc2jPig" bpmnElement="_C8A5A738-0E8D-4115-80D5-D0BE165113AC" sourceElement="_y98ELc0jEeiE7JEbc2jPig" targetElement="_y98ELs0jEeiE7JEbc2jPig">
         <di:waypoint xsi:type="dc:Point" x="505.0" y="222.0"/>
         <di:waypoint xsi:type="dc:Point" x="712.0" y="94.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_gvDR1M0jEeiE7JEbc2jPig" bpmnElement="_B5195493-443D-4B1A-BC9A-3B73AAAA99B2" sourceElement="_gvCqy80jEeiE7JEbc2jPig" targetElement="_gvCqzM0jEeiE7JEbc2jPig">
+      <bpmndi:BPMNEdge id="_y98ENc0jEeiE7JEbc2jPig" bpmnElement="_B5195493-443D-4B1A-BC9A-3B73AAAA99B2" sourceElement="_y98EK80jEeiE7JEbc2jPig" targetElement="_y98ELM0jEeiE7JEbc2jPig">
         <di:waypoint xsi:type="dc:Point" x="128.0" y="222.0"/>
         <di:waypoint xsi:type="dc:Point" x="298.0" y="222.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_gvDR1c0jEeiE7JEbc2jPig" bpmnElement="_2E892DD8-569A-45B0-9C20-2C738141652C" sourceElement="_gvCqzs0jEeiE7JEbc2jPig" targetElement="_gvCq0M0jEeiE7JEbc2jPig">
+      <bpmndi:BPMNEdge id="_y98ENs0jEeiE7JEbc2jPig" bpmnElement="_2E892DD8-569A-45B0-9C20-2C738141652C" sourceElement="_y98ELs0jEeiE7JEbc2jPig" targetElement="_y98EMM0jEeiE7JEbc2jPig">
         <di:waypoint xsi:type="dc:Point" x="712.0" y="94.0"/>
         <di:waypoint xsi:type="dc:Point" x="910.0" y="231.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_gvDR1s0jEeiE7JEbc2jPig" bpmnElement="_F9604EE7-B29F-41E8-A8A2-4F851C83ED23" sourceElement="_gvCqz80jEeiE7JEbc2jPig" targetElement="_gvCq0M0jEeiE7JEbc2jPig">
+      <bpmndi:BPMNEdge id="_y98EN80jEeiE7JEbc2jPig" bpmnElement="_F9604EE7-B29F-41E8-A8A2-4F851C83ED23" sourceElement="_y98EL80jEeiE7JEbc2jPig" targetElement="_y98EMM0jEeiE7JEbc2jPig">
         <di:waypoint xsi:type="dc:Point" x="712.0" y="350.0"/>
         <di:waypoint xsi:type="dc:Point" x="910.0" y="231.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_gvDR180jEeiE7JEbc2jPig" bpmnElement="_E375C709-C979-4F26-B879-7897141C1280" sourceElement="_gvCqzM0jEeiE7JEbc2jPig" targetElement="_gvCqzc0jEeiE7JEbc2jPig">
+      <bpmndi:BPMNEdge id="_y98EOM0jEeiE7JEbc2jPig" bpmnElement="_E375C709-C979-4F26-B879-7897141C1280" sourceElement="_y98ELM0jEeiE7JEbc2jPig" targetElement="_y98ELc0jEeiE7JEbc2jPig">
         <di:waypoint xsi:type="dc:Point" x="298.0" y="222.0"/>
         <di:waypoint xsi:type="dc:Point" x="505.0" y="222.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_gvDR2M0jEeiE7JEbc2jPig" type="BPSimData">
+  <bpmn2:relationship id="_y98EOc0jEeiE7JEbc2jPig" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9ABAEF0E-9932-4D15-9138-B3AB361E3B8A" id="_gvDR2c0jEeiE7JEbc2jPig">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9ABAEF0E-9932-4D15-9138-B3AB361E3B8A" id="_y98EOs0jEeiE7JEbc2jPig">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8D85925C-3491-4722-AB89-00A6EC6A6203" id="_gvDR2s0jEeiE7JEbc2jPig">
-            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
-              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
-                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
-              </bpsim:ProcessingTime>
-            </bpsim:TimeParameters>
-            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
-              <bpsim:UnitCost xsi:type="bpsim:Parameter">
-                <bpsim:FloatingParameter value="0.0"/>
-              </bpsim:UnitCost>
-            </bpsim:CostParameters>
-          </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5EC12162-A866-426F-B13C-B29A7EEA0754" id="_gvDR280jEeiE7JEbc2jPig">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_8D85925C-3491-4722-AB89-00A6EC6A6203" id="_y98EO80jEeiE7JEbc2jPig">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -192,7 +180,19 @@ return tile.getLoan_type().equals("hyl");]]></bpmn2:conditionExpression>
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_04B552DB-8C1E-42AB-B021-DEC8F2FC9707" id="_gvDR3M0jEeiE7JEbc2jPig">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5EC12162-A866-426F-B13C-B29A7EEA0754" id="_y98EPM0jEeiE7JEbc2jPig">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_04B552DB-8C1E-42AB-B021-DEC8F2FC9707" id="_y98EPc0jEeiE7JEbc2jPig">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -207,7 +207,7 @@ return tile.getLoan_type().equals("hyl");]]></bpmn2:conditionExpression>
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_gvCqwM0jEeiE7JEbc2jPig</bpmn2:source>
-    <bpmn2:target>_gvCqwM0jEeiE7JEbc2jPig</bpmn2:target>
+    <bpmn2:source>_y98EIM0jEeiE7JEbc2jPig</bpmn2:source>
+    <bpmn2:target>_y98EIM0jEeiE7JEbc2jPig</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
