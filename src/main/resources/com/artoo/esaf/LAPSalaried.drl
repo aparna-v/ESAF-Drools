@@ -6,6 +6,7 @@ import com.artoo.esaf.Output;
 global Output out;
 
 rule "LAPSalaried - Vintage with esaf very long"
+ruleflow-group "lap_salaried"
 
     when
         $tile : TileView(vintage_esaf == "very_long")
@@ -15,6 +16,7 @@ rule "LAPSalaried - Vintage with esaf very long"
 end
 
 rule "LAPSalaried - Vintage with esaf long"
+ruleflow-group "lap_salaried"
 
     when
         $tile : TileView(vintage_esaf == "long")
@@ -24,6 +26,7 @@ rule "LAPSalaried - Vintage with esaf long"
 end
 
 rule "LAPSalaried - Vintage with esaf medium"
+ruleflow-group "lap_salaried"
 
     when
        $tile : TileView(vintage_esaf == "medium")
@@ -33,6 +36,7 @@ rule "LAPSalaried - Vintage with esaf medium"
 end
 
 rule "LAPSalaried - Vintage with esaf short"
+ruleflow-group "lap_salaried"
 
     when
         $tile : TileView(vintage_esaf == "short")
