@@ -8,35 +8,35 @@ public class TileView implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "loan_type")
+	@org.kie.api.definition.type.Label("loan_type")
 	private java.lang.String loan_type;
-	@org.kie.api.definition.type.Label(value = "person_applicant_present_home_address_years")
+	@org.kie.api.definition.type.Label("person_applicant_present_home_address_years")
 	private java.lang.String person_applicant_present_home_address_years;
-	@org.kie.api.definition.type.Label(value = "person_applicant_years_of_experience")
+	@org.kie.api.definition.type.Label("person_applicant_years_of_experience")
 	private java.lang.String person_applicant_years_of_experience;
-	@org.kie.api.definition.type.Label(value = "collateral_asset_type")
+	@org.kie.api.definition.type.Label("collateral_asset_type")
 	private java.lang.String collateral_asset_type;
-	@org.kie.api.definition.type.Label(value = "collateral_asset_age")
+	@org.kie.api.definition.type.Label("collateral_asset_age")
 	private java.lang.Integer collateral_asset_age;
-	@org.kie.api.definition.type.Label(value = "experience_in_business")
+	@org.kie.api.definition.type.Label("experience_in_business")
 	private java.lang.String experience_in_business;
-	@org.kie.api.definition.type.Label(value = "foir")
+	@org.kie.api.definition.type.Label("foir")
 	private java.math.BigDecimal foir;
-	@org.kie.api.definition.type.Label(value = "ltv")
+	@org.kie.api.definition.type.Label("ltv")
 	private java.lang.Double ltv;
-	@org.kie.api.definition.type.Label(value = "vintage_esaf")
+	@org.kie.api.definition.type.Label("vintage_esaf")
 	private java.lang.String vintage_esaf;
-	@org.kie.api.definition.type.Label(value = "business_location")
+	@org.kie.api.definition.type.Label("business_location")
 	private java.lang.String business_location;
-	@org.kie.api.definition.type.Label(value = "house_pledging")
+	@org.kie.api.definition.type.Label("house_pledging")
 	private java.lang.String house_pledging;
-	@org.kie.api.definition.type.Label(value = "business_group")
+	@org.kie.api.definition.type.Label("business_group")
 	private java.lang.String business_group;
-	@org.kie.api.definition.type.Label(value = "borrower_history")
+	@org.kie.api.definition.type.Label("borrower_history")
 	private java.lang.String borrower_history;
-	@org.kie.api.definition.type.Label(value = "property_value")
+	@org.kie.api.definition.type.Label("property_value")
 	private java.lang.String property_value;
-	@org.kie.api.definition.type.Label(value = "property_pledged")
+	@org.kie.api.definition.type.Label("property_pledged")
 	private java.lang.String property_pledged;
 
 	public TileView() {
@@ -171,7 +171,7 @@ public class TileView implements java.io.Serializable {
 			java.lang.String collateral_asset_type,
 			java.lang.Integer collateral_asset_age,
 			java.lang.String experience_in_business, java.math.BigDecimal foir,
-			java.math.BigDecimal ltv, java.lang.String vintage_esaf,
+			java.lang.Double ltv, java.lang.String vintage_esaf,
 			java.lang.String business_location,
 			java.lang.String house_pledging, java.lang.String business_group,
 			java.lang.String borrower_history, java.lang.String property_value,
