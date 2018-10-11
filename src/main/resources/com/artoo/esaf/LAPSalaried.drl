@@ -8,7 +8,7 @@ global Output out;
 rule "LAPSalaried - Vintage with esaf very long"
 
     when
-        $application : ApplicationView(vintage_with_esaf == "very_long")
+        $tile : TileView(vintage_esaf == "very_long")
     then
         score.setScore(10, 10f);
         
@@ -17,8 +17,7 @@ end
 rule "LAPSalaried - Vintage with esaf long"
 
     when
-        $application : ApplicationView(loan_type == Constants.LOAN_TYPE_IBL_1,
-        	vintage_with_esaf == Constants.VINTAGE_ESAF_LONG)
+        $tile : TileView(vintage_esaf == "long")
     then
         score.setScore(8, 10f);
         
@@ -27,8 +26,7 @@ end
 rule "LAPSalaried - Vintage with esaf medium"
 
     when
-        $application : ApplicationView(loan_type == Constants.LOAN_TYPE_IBL_1,
-        	vintage_with_esaf == Constants.VINTAGE_ESAF_MEDIUM)
+       $tile : TileView(vintage_esaf == "medium")
     then
         score.setScore(6, 10f);
         
@@ -37,8 +35,7 @@ end
 rule "LAPSalaried - Vintage with esaf short"
 
     when
-        $application : ApplicationView(loan_type == Constants.LOAN_TYPE_IBL_1,
-        	vintage_with_esaf == Constants.VINTAGE_ESAF_SHORT)
+        $tile : TileView(vintage_esaf == "short")
     then
         score.setScore(4, 10f);
         
