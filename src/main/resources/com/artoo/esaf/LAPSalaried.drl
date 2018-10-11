@@ -11,7 +11,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(vintage_esaf == "very_long")
     then
-        Ops.calc(out, 10.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -21,7 +21,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(vintage_esaf == "long")
     then
-        Ops.calc(out, 8.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -31,7 +31,7 @@ ruleflow-group "lap_salaried"
     when
        $tile : TileView(vintage_esaf == "medium")
     then
-        Ops.calc(out, 6.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -41,7 +41,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(vintage_esaf == "short")
     then
-        Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -50,9 +50,39 @@ rule "LAPSalaried - Year of stay in current address >5 years"
 ruleflow-group "lap_salaried"
 
     when
+        $tile : TileView(person_applicant_present_home_address_years == "long")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Year of stay in current address >3 years and <=5 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_present_home_address_years == "medium")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Year of stay in current address >1 years and <=2 years"
+ruleflow-group "lap_salaried"
+
+    when
         $tile : TileView(person_applicant_present_home_address_years == "short")
     then
-        Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Year of stay in current address <1 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_present_home_address_years == "very_short")
+    then
+        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
