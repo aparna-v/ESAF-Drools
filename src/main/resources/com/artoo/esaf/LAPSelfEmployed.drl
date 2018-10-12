@@ -184,3 +184,44 @@ ruleflow-group "lap_self_employed"
         Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
+
+rule "LAPSelfEmployed - Business Vintage - >= 2 and < 4 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(experience_in_business == ">= 2 and < 4 years")
+    then
+        Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Vintage - >= 4 and < 6 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(experience_in_business == ">= 4 and < 6 years")
+    then
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Vintage - >= 6 and < 8 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(experience_in_business == ">= 6 and < 8 years")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Vintage - Greater than 8 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(experience_in_business == "Greater than 8 years")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
