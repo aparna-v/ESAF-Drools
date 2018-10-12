@@ -21,7 +21,7 @@ public class TileView implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("experience_in_business")
 	private java.lang.String experience_in_business;
 	@org.kie.api.definition.type.Label("foir")
-	private java.math.BigDecimal foir;
+	private Double foir;
 	@org.kie.api.definition.type.Label("ltv")
 	private java.lang.Double ltv;
 	@org.kie.api.definition.type.Label("vintage_esaf")
@@ -93,14 +93,6 @@ public class TileView implements java.io.Serializable {
 		this.experience_in_business = experience_in_business;
 	}
 
-	public java.math.BigDecimal getFoir() {
-		return this.foir;
-	}
-
-	public void setFoir(java.math.BigDecimal foir) {
-		this.foir = foir;
-	}
-
 	public java.lang.Double getLtv() {
 		return this.ltv;
 	}
@@ -165,12 +157,20 @@ public class TileView implements java.io.Serializable {
 		this.property_pledged = property_pledged;
 	}
 
+	public java.lang.Double getFoir() {
+		return this.foir;
+	}
+
+	public void setFoir(java.lang.Double foir) {
+		this.foir = foir;
+	}
+
 	public TileView(java.lang.String loan_type,
 			java.lang.String person_applicant_present_home_address_years,
 			java.lang.String person_applicant_years_of_experience,
 			java.lang.String collateral_asset_type,
 			java.lang.Integer collateral_asset_age,
-			java.lang.String experience_in_business, java.math.BigDecimal foir,
+			java.lang.String experience_in_business, java.lang.Double foir,
 			java.lang.Double ltv, java.lang.String vintage_esaf,
 			java.lang.String business_location,
 			java.lang.String house_pledging, java.lang.String business_group,
