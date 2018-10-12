@@ -1,2 +1,13 @@
 package com.artoo.esaf;
 
+import com.artoo.model.app.*;
+
+rule "Finishing"
+ruleflow-group "finish"
+
+    when
+        $app : App()
+    then
+        
+        
+end
