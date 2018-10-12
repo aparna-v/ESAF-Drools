@@ -1,2 +1,56 @@
 package com.artoo.esaf;
 
+import com.artoo.esaf.TileView;
+import com.artoo.esaf.Output;
+
+global Output out;
+
+rule "LAPSelfEmployed - Vintage with esaf - More than 10 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(vintage_esaf == "More than 10 years")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Vintage with esaf - 5 to 10 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(vintage_esaf == "5 to 10 years")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Vintage with esaf - 2 to 5 years"
+ruleflow-group "lap_self_employed"
+
+    when
+       $tile : TileView(vintage_esaf == "2 to 5 years")
+    then
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Vintage with esaf - Less than 2 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(vintage_esaf == "Less than 2 years")
+    then
+        Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Vintage with esaf - Not an ESAF customer"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(vintage_esaf == "Not an ESAF customer")
+    then
+        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
