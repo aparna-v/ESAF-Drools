@@ -22,6 +22,7 @@ public class Ops {
         }else if(charc == Ops.PROPERTY_CHARC){
             out.setProperty_charac(out.getProperty_charac() + (score * (weight/100)));
         }
+        System.out.println("\n------------------------\nOVERALL_SCR: "+out.getOverall_score()+"\nBORROWER_CHARC: "+out.getBorrower_charc()+"\nFINANCIAL_CHARC: "+out.getFinancial_charc()+"\nTRANSACTL_CHARC: "+out.getTransactional_charc()+"\nPROPERTY_CHARC: "+out.getProperty_charac()+"\n------------------------\n");
         return out;
     }
 }
