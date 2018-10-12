@@ -38,8 +38,7 @@ ruleflow-group "tiling"
         $property_value: 		Observation.Details(tag == 'property_value') 		from $observation.details
         $property_pledged: 		Observation.Details(tag == 'property_pledged') 		from $observation.details
         $ba:					Entity(type == "business") 							from $app.entities
-        $ba_profile:            Profile()                                           from $ba.profile
-        $ba_profile_extra:		Profile.Extra()										from $ba_profile.extra
+        $ba_profile_extra:		Profile.Extra()										from $ba.profile.extra
         $summary:				Summary()											from $app.summary
         $summary_extra:			Summary.Extra()										from $summary.extra
 
