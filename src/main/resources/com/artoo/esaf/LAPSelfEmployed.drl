@@ -124,3 +124,63 @@ ruleflow-group "lap_self_employed"
         Ops.calc(out, 0.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
+
+rule "LAPSelfEmployed - Occupation/Business Groups - Salaried"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_group == "Salaried")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Occupation/Business Groups - Return NRI"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_group == "Return NRI")
+    then
+        Ops.calc(out, 9.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Occupation/Business Groups - Owner of MSME’s"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_group == "Owner of MSME’s")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Occupation/Business Groups - Self employed professionals"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_group == "Self employed professionals")
+    then
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Occupation/Business Groups - Blue Collar NRI"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_group == "Blue Collar NRI")
+    then
+        Ops.calc(out, 5.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Occupation/Business Groups - Others"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_group == "Others")
+    then
+        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
