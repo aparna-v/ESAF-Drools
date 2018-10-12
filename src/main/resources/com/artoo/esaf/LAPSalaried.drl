@@ -92,7 +92,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(person_applicant_present_home_address_years == "very_short")
     then
-        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 0.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -132,7 +132,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(business_group == "Self employed professionals")
     then
-        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -141,6 +141,16 @@ ruleflow-group "lap_salaried"
 
     when
         $tile : TileView(business_group == "Blue Collar NRI")
+    then
+        Ops.calc(out, 5.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Occupation/Business Groups - Daily Wage"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(business_group == "Daily Wage")
     then
         Ops.calc(out, 5.0d, 5.0d, Ops.BORROWER_CHARC);
         
@@ -213,7 +223,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "Available and not pledged")
     then
-        Ops.calc(out, 10.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 10.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -223,7 +233,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "Own Vacant Land available")
     then
-        Ops.calc(out, 9.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 9.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -233,7 +243,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "Own house , pledged, Repaid promptly")
     then
-        Ops.calc(out, 8.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 8.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -243,7 +253,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "Own house , pledged, Repaid occassionaly")
     then
-        Ops.calc(out, 7.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 7.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -253,7 +263,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "Staying in family House, title deed not pledged")
     then
-        Ops.calc(out, 6.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 6.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -263,7 +273,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "Staying in family House, title deed pledged")
     then
-        Ops.calc(out, 5.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 5.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -273,7 +283,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "No repayment")
     then
-        Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 4.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -283,7 +293,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "Staying in rental, family share available")
     then
-        Ops.calc(out, 3.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 3.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -293,37 +303,37 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(house_pledging == "No own / family house, staying on rent")
     then
-        Ops.calc(out, 0.0d, 10.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 0.0d, 12.0d, Ops.BORROWER_CHARC);
         
 end
 
-rule "LAPSalaried - FOIR - Less than 55%"
+rule "LAPSalaried - FOIR - Less than 50%"
 ruleflow-group "lap_salaried"
 
     when
-        $tile : TileView(foir < 55)
+        $tile : TileView(foir < 50)
     then
-        Ops.calc(out, 10.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        Ops.calc(out, 10.0d, 15.0d, Ops.FINANCIAL_CHARC);
         
 end
 
-rule "LAPSalaried - FOIR - >=55% to <65%"
+rule "LAPSalaried - FOIR - >=50% to <60%"
 ruleflow-group "lap_salaried"
 
     when
-        $tile : TileView(foir >= 55 && foir < 65)
+        $tile : TileView(foir >= 50 && foir < 60)
     then
-        Ops.calc(out, 8.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        Ops.calc(out, 8.0d, 15.0d, Ops.FINANCIAL_CHARC);
         
 end
 
-rule "LAPSalaried - FOIR - >=65% to <75%"
+rule "LAPSalaried - FOIR - >=60% to <75%"
 ruleflow-group "lap_salaried"
 
     when
-        $tile : TileView(foir >= 65 && foir < 75)
+        $tile : TileView(foir >= 60 && foir < 75)
     then
-        Ops.calc(out, 6.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        Ops.calc(out, 6.0d, 15.0d, Ops.FINANCIAL_CHARC);
         
 end
 
@@ -333,7 +343,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(foir >= 75 && foir < 85)
     then
-        Ops.calc(out, 4.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        Ops.calc(out, 4.0d, 15.0d, Ops.FINANCIAL_CHARC);
         
 end
 
@@ -343,7 +353,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(foir >= 85)
     then
-        Ops.calc(out, 2.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        Ops.calc(out, 2.0d, 15.0d, Ops.FINANCIAL_CHARC);
         
 end
 
@@ -383,7 +393,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(borrower_history == "Frequent Defaults")
     then
-        Ops.calc(out, 0.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        Ops.calc(out, -10.0d, 10.0d, Ops.TRANSACTL_CHARC);
         
 end
 
@@ -393,7 +403,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(property_value == "Property has appreciated in last 3 years")
     then
-        Ops.calc(out, 10.0d, 6.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 10.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -403,7 +413,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(property_value == "Property has not appreciated in last 3 years")
     then
-        Ops.calc(out, 4.0d, 6.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 4.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -413,7 +423,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(property_value == "Property has depreciated in last 3 years")
     then
-        Ops.calc(out, -2.0d, 6.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, -2.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -423,7 +433,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(collateral_asset_age < 1)
     then
-        Ops.calc(out, 10.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 10.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -433,7 +443,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(collateral_asset_age >= 1 && collateral_asset_age <5)
     then
-        Ops.calc(out, 8.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 8.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -443,7 +453,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(collateral_asset_age >= 5 && collateral_asset_age <10)
     then
-        Ops.calc(out, 6.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 6.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -453,7 +463,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(collateral_asset_age >= 10 && collateral_asset_age <15)
     then
-        Ops.calc(out, 4.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 4.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -463,7 +473,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(collateral_asset_age >= 15)
     then
-        Ops.calc(out, 2.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 2.0d, 5.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -571,7 +581,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(property_pledged == "Property is located near the main road/highway and access to the property is via tarred roads")
     then
-        Ops.calc(out, 10.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 10.0d, 8.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -581,7 +591,7 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(property_pledged == "Access to the property is via gravel road")
     then
-        Ops.calc(out, 6.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 6.0d, 8.0d, Ops.PROPERTY_CHARC);
         
 end
 
@@ -591,6 +601,6 @@ ruleflow-group "lap_salaried"
     when
         $tile : TileView(property_pledged == "Access to the property is via mud path")
     then
-        Ops.calc(out, 2.0d, 7.0d, Ops.PROPERTY_CHARC);
+        Ops.calc(out, 2.0d, 8.0d, Ops.PROPERTY_CHARC);
         
 end
