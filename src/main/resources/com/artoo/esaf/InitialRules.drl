@@ -59,7 +59,7 @@ ruleflow-group "tiling"
         $tile.setLtv($summary.getAmount_to_asset_value());
         $tile.setFoir($summary_extra.getFoir()!=null? $summary_extra.getFoir().doubleValue() : 0.0d);       
         update($tile);
-        System.out.println($tile.toString());
+        System.out.println($tile.getLoan_type());
 end
     
     
