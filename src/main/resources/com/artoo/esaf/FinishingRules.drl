@@ -8,6 +8,7 @@ ruleflow-group "finish"
     when
         $app : App()
     then
-        update(new App()); 
+        $app = new App();
+        update($app); 
         
 end
