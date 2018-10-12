@@ -9,6 +9,5 @@ ruleflow-group "finish"
         $app : App()
     then
         $app = new App();
-        update($app); 
         
 end
