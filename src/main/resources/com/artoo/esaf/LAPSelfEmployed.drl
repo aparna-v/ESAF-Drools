@@ -326,31 +326,31 @@ ruleflow-group "lap_self_employed"
         
 end
 
-rule "LAPSelfEmployed - FOIR - Less than 55%"
+rule "LAPSelfEmployed - FOIR - Less than 50%"
 ruleflow-group "lap_self_employed"
 
     when
-        $tile : TileView(foir < 55)
+        $tile : TileView(foir < 50)
     then
         Ops.calc(out, 10.0d, 20.0d, Ops.FINANCIAL_CHARC);
         
 end
 
-rule "LAPSelfEmployed - FOIR - >=55% to <65%"
+rule "LAPSelfEmployed - FOIR - >=50% to <60%"
 ruleflow-group "lap_self_employed"
 
     when
-        $tile : TileView(foir >= 55 && foir < 65)
+        $tile : TileView(foir >= 50 && foir < 60)
     then
         Ops.calc(out, 8.0d, 20.0d, Ops.FINANCIAL_CHARC);
         
 end
 
-rule "LAPSelfEmployed - FOIR - >=65% to <75%"
+rule "LAPSelfEmployed - FOIR - >=60% to <75%"
 ruleflow-group "lap_self_employed"
 
     when
-        $tile : TileView(foir >= 65 && foir < 75)
+        $tile : TileView(foir >= 60 && foir < 75)
     then
         Ops.calc(out, 6.0d, 20.0d, Ops.FINANCIAL_CHARC);
         
@@ -412,7 +412,7 @@ ruleflow-group "lap_self_employed"
     when
         $tile : TileView(borrower_history == "Frequent Defaults")
     then
-        Ops.calc(out, 0.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        Ops.calc(out, -10.0d, 10.0d, Ops.TRANSACTL_CHARC);
         
 end
 
