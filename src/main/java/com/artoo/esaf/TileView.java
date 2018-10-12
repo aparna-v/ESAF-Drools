@@ -39,9 +39,6 @@ public class TileView implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("property_pledged")
 	private java.lang.String property_pledged;
 
-	@org.kie.api.definition.type.Label(value = "business_vintage")
-	private java.lang.String business_vintage;
-
 	public TileView() {
 	}
 
@@ -168,14 +165,6 @@ public class TileView implements java.io.Serializable {
 		this.foir = foir;
 	}
 
-	public java.lang.String getBusiness_vintage() {
-		return this.business_vintage;
-	}
-
-	public void setBusiness_vintage(java.lang.String business_vintage) {
-		this.business_vintage = business_vintage;
-	}
-
 	public TileView(java.lang.String loan_type,
 			java.lang.String person_applicant_present_home_address_years,
 			java.lang.String person_applicant_years_of_experience,
@@ -186,7 +175,7 @@ public class TileView implements java.io.Serializable {
 			java.lang.String business_location,
 			java.lang.String house_pledging, java.lang.String business_group,
 			java.lang.String borrower_history, java.lang.String property_value,
-			java.lang.String property_pledged, java.lang.String business_vintage) {
+			java.lang.String property_pledged) {
 		this.loan_type = loan_type;
 		this.person_applicant_present_home_address_years = person_applicant_present_home_address_years;
 		this.person_applicant_years_of_experience = person_applicant_years_of_experience;
@@ -202,7 +191,6 @@ public class TileView implements java.io.Serializable {
 		this.borrower_history = borrower_history;
 		this.property_value = property_value;
 		this.property_pledged = property_pledged;
-		this.business_vintage = business_vintage;
 	}
 
 }
