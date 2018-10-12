@@ -170,11 +170,15 @@ public class TileView implements java.io.Serializable {
 			java.lang.String person_applicant_years_of_experience,
 			java.lang.String collateral_asset_type,
 			java.lang.Integer collateral_asset_age,
-			java.lang.String experience_in_business, java.lang.Double foir,
-			java.lang.Double ltv, java.lang.String vintage_esaf,
+			java.lang.String experience_in_business, 
+			java.lang.Double foir,
+			java.lang.Double ltv, 
+			java.lang.String vintage_esaf,
 			java.lang.String business_location,
-			java.lang.String house_pledging, java.lang.String business_group,
-			java.lang.String borrower_history, java.lang.String property_value,
+			java.lang.String house_pledging, 
+			java.lang.String business_group,
+			java.lang.String borrower_history, 
+			java.lang.String property_value,
 			java.lang.String property_pledged) {
 		this.loan_type = loan_type;
 		this.person_applicant_present_home_address_years = person_applicant_present_home_address_years;
