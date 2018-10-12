@@ -2,7 +2,7 @@ package com.artoo.esaf;
 
 import com.artoo.model.app.*;
 
-rule "Finishing"
+rule "Finish"
 ruleflow-group "finish"
 
     when
