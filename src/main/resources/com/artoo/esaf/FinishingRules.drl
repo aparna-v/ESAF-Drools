@@ -6,8 +6,8 @@ rule "Finish"
 ruleflow-group "finish"
 
     when
-        $app : App()
+        
     then
-        $app = new App();
+        
         
 end
