@@ -526,3 +526,71 @@ ruleflow-group "lap_salaried"
         Ops.calc(out, 0.0d, 10.0d, Ops.PROPERTY_CHARC);
         
 end
+
+
+rule "LAPSalaried - Type of property - Residential"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(
+            collateral_asset_type == "residential_property_self_occupied" ||
+            collateral_asset_type == "residential_property_rented" ||
+            collateral_asset_type == "village_panchayat_appr_res_prop_so" ||
+            collateral_asset_type == "village_panchayat_appr_res_prop_rented" )
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Type of property - Commercial"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(
+            collateral_asset_type == "commercial_property_self_occupied" ||
+            collateral_asset_type == "Commercial Property - Rented" ||
+            collateral_asset_type == "vacant_plot")
+    then
+        Ops.calc(out, 8.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Type of property - Industrial"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(collateral_asset_type == "farm_house_self_occupied")
+    then
+        Ops.calc(out, 6.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Location of property - Property is located near the main road/highway and access to the property is via tarred roads"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(property_pledged == "Property is located near the main road/highway and access to the property is via tarred roads")
+    then
+        Ops.calc(out, 10.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Location of property - Access to the property is via gravel road"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(property_pledged == "Access to the property is via gravel road")
+    then
+        Ops.calc(out, 6.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Location of property - Access to the property is via mud path"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(property_pledged == "Access to the property is via mud path")
+    then
+        Ops.calc(out, 2.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
