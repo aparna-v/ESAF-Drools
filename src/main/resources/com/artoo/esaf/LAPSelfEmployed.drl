@@ -315,3 +315,301 @@ ruleflow-group "lap_self_employed"
         Ops.calc(out, 0.0d, 10.0d, Ops.BORROWER_CHARC);
         
 end
+
+rule "LAPSelfEmployed - FOIR - Less than 55%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(foir < 55)
+    then
+        Ops.calc(out, 10.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - FOIR - >=55% to <65%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(foir >= 55 && foir < 65)
+    then
+        Ops.calc(out, 8.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - FOIR - >=65% to <75%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(foir >= 65 && foir < 75)
+    then
+        Ops.calc(out, 6.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - FOIR - >=75% to <85%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(foir >= 75 && foir < 85)
+    then
+        Ops.calc(out, 4.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - FOIR - more than or equal to 85%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(foir >= 85)
+    then
+        Ops.calc(out, 2.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Credit history of the borrower - No Default history (Accounts running regular)"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(borrower_history == "No Default history (Accounts running regular)")
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Credit history of the borrower - Occasional Defaults"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(borrower_history == "Occasional Defaults")
+    then
+        Ops.calc(out, 7.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Credit history of the borrower - No Credit History"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(borrower_history == "No Credit History")
+    then
+        Ops.calc(out, 5.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Credit history of the borrower - Frequent Defaults"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(borrower_history == "Frequent Defaults")
+    then
+        Ops.calc(out, 0.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Property Value - Property has appreciated in last 3 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(property_value == "Property has appreciated in last 3 years")
+    then
+        Ops.calc(out, 10.0d, 6.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Property Value - Property has not appreciated in last 3 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(property_value == "Property has not appreciated in last 3 years")
+    then
+        Ops.calc(out, 4.0d, 6.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Property Value - Property has depreciated in last 3 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(property_value == "Property has depreciated in last 3 years")
+    then
+        Ops.calc(out, -2.0d, 6.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Age of building - Less than 1 year/new construction"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(collateral_asset_age < 1)
+    then
+        Ops.calc(out, 10.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Age of building - >=1 or <5 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(collateral_asset_age >= 1 && collateral_asset_age <5)
+    then
+        Ops.calc(out, 8.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Age of building - >=5 or <10 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(collateral_asset_age >= 5 && collateral_asset_age <10)
+    then
+        Ops.calc(out, 6.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Age of building - >=10 or <15 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(collateral_asset_age >= 10 && collateral_asset_age <15)
+    then
+        Ops.calc(out, 4.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Age of building - >=15 years"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(collateral_asset_age >= 15)
+    then
+        Ops.calc(out, 2.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - LTV - Less than or equal to 40%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(ltv <= 40)
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - LTV - >40% and <=50%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(ltv > 40 && ltv <=50)
+    then
+        Ops.calc(out, 8.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - LTV - >50% and <=60%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(ltv > 50 && ltv <=60)
+    then
+        Ops.calc(out, 6.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - LTV - >60% and <=70%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(ltv > 60 && ltv <=70)
+    then
+        Ops.calc(out, 4.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - LTV - >70% and <=80%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(ltv > 70 && ltv <=80)
+    then
+        Ops.calc(out, 2.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - LTV - more than 80%"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(ltv > 80)
+    then
+        Ops.calc(out, 0.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+
+rule "LAPSelfEmployed - Type of property - Residential"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(
+            collateral_asset_type == "residential_property_self_occupied" ||
+            collateral_asset_type == "residential_property_rented" ||
+            collateral_asset_type == "village_panchayat_appr_res_prop_so" ||
+            collateral_asset_type == "village_panchayat_appr_res_prop_rented" )
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Type of property - Commercial"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(
+            collateral_asset_type == "commercial_property_self_occupied" ||
+            collateral_asset_type == "Commercial Property - Rented" ||
+            collateral_asset_type == "vacant_plot")
+    then
+        Ops.calc(out, 8.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Type of property - Industrial"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(collateral_asset_type == "farm_house_self_occupied")
+    then
+        Ops.calc(out, 6.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Location of property - Property is located near the main road/highway and access to the property is via tarred roads"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(property_pledged == "Property is located near the main road/highway and access to the property is via tarred roads")
+    then
+        Ops.calc(out, 10.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Location of property - Access to the property is via gravel road"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(property_pledged == "Access to the property is via gravel road")
+    then
+        Ops.calc(out, 6.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Location of property - Access to the property is via mud path"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(property_pledged == "Access to the property is via mud path")
+    then
+        Ops.calc(out, 2.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
