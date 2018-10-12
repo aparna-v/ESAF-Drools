@@ -54,3 +54,73 @@ ruleflow-group "lap_self_employed"
         Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
+
+rule "LAPSelfEmployed - Business Location - Pucca shop , own premises"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_location == "Pucca shop , own premises")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Location - Own house is the business premises"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_location == "Own house is the business premises")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Location - Pucca shop, rented.  >4 years in the current location"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_location == "Pucca shop, rented.  >4 years in the current location")
+    then
+        Ops.calc(out, 7.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Location - Pucca shop, rented.  <4 years in the current location and residence within 10 kms"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_location == "Pucca shop, rented.  <4 years in the current location and residence within 10 kms")
+    then
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Location - Pucca shop, rented.  <4 years in the current location and residence  greater than 10 kms"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_location == "Pucca shop, rented.  <4 years in the current location and residence  greater than 10 kms")
+    then
+        Ops.calc(out, 5.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Location - Way side temporary set up"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_location == "Way side temporary set up")
+    then
+        Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSelfEmployed - Business Location - Not Applicable (Salaried borrower)"
+ruleflow-group "lap_self_employed"
+
+    when
+        $tile : TileView(business_location == "Not Applicable (Salaried borrower)")
+    then
+        Ops.calc(out, 0.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
