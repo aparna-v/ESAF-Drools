@@ -467,3 +467,62 @@ ruleflow-group "lap_salaried"
         
 end
 
+rule "LAPSalaried - LTV - Less than or equal to 40%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(ltv <= 40)
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - LTV - >40% and <=50%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(ltv > 40 && ltv <=50)
+    then
+        Ops.calc(out, 8.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - LTV - >50% and <=60%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(ltv > 50 && ltv <=60)
+    then
+        Ops.calc(out, 6.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - LTV - >60% and <=70%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(ltv > 60 && ltv <=70)
+    then
+        Ops.calc(out, 4.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - LTV - >70% and <=80%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(ltv > 70 && ltv <=80)
+    then
+        Ops.calc(out, 2.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - LTV - more than 80%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(ltv > 80)
+    then
+        Ops.calc(out, 0.0d, 10.0d, Ops.PROPERTY_CHARC);
+        
+end
