@@ -5,43 +5,53 @@ import com.artoo.esaf.Output;
 
 global Output out;
 
-rule "LAPSalaried - Vintage with esaf very long"
+rule "LAPSalaried - Vintage with esaf - More than 10 years"
 ruleflow-group "lap_salaried"
 
     when
-        $tile : TileView(vintage_esaf == "very_long")
+        $tile : TileView(vintage_esaf == "More than 10 years")
     then
         Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
-rule "LAPSalaried - Vintage with esaf long"
+rule "LAPSalaried - Vintage with esaf - 5 to 10 years"
 ruleflow-group "lap_salaried"
 
     when
-        $tile : TileView(vintage_esaf == "long")
+        $tile : TileView(vintage_esaf == "5 to 10 years")
     then
         Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
-rule "LAPSalaried - Vintage with esaf medium"
+rule "LAPSalaried - Vintage with esaf - 2 to 5 years"
 ruleflow-group "lap_salaried"
 
     when
-       $tile : TileView(vintage_esaf == "medium")
+       $tile : TileView(vintage_esaf == "2 to 5 years")
     then
         Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
-rule "LAPSalaried - Vintage with esaf short"
+rule "LAPSalaried - Vintage with esaf - Less than 2 years"
 ruleflow-group "lap_salaried"
 
     when
-        $tile : TileView(vintage_esaf == "short")
+        $tile : TileView(vintage_esaf == "Less than 2 years")
     then
         Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Vintage with esaf - Not an ESAF customer"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(vintage_esaf == "Not an ESAF customer")
+    then
+        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
@@ -86,5 +96,64 @@ ruleflow-group "lap_salaried"
         
 end
 
+rule "LAPSalaried - Occupation/Business Groups - Salaried"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(business_group == "Salaried")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Occupation/Business Groups - Return NRI"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(business_group == "Return NRI")
+    then
+        Ops.calc(out, 9.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Occupation/Business Groups - Owner of MSME’s"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(business_group == "Owner of MSME’s")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Occupation/Business Groups - Self employed professionals"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(business_group == "Self employed professionals")
+    then
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Occupation/Business Groups - Blue Collar NRI"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(business_group == "Blue Collar NRI")
+    then
+        Ops.calc(out, 5.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Occupation/Business Groups - Others"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(business_group == "Others")
+    then
+        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
 
 
