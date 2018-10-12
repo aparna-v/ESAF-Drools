@@ -1,2 +1,388 @@
 package com.artoo.esaf;
 
+import com.artoo.esaf.TileView;
+import com.artoo.esaf.Output;
+
+global Output out;
+
+rule "PLVehicle - Vintage with esaf - More than 10 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(vintage_esaf == "More than 10 years")
+    then
+        Ops.calc(out, 10.0d, 20.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Vintage with esaf - 5 to 10 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(vintage_esaf == "5 to 10 years")
+    then
+        Ops.calc(out, 8.0d, 20.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Vintage with esaf - 2 to 5 years"
+ruleflow-group "pl_vehicle"
+
+    when
+       $tile : TileView(vintage_esaf == "2 to 5 years")
+    then
+        Ops.calc(out, 6.0d, 20.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Vintage with esaf - Less than 2 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(vintage_esaf == "Less than 2 years")
+    then
+        Ops.calc(out, 4.0d, 20.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Vintage with esaf - Not an ESAF customer"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(vintage_esaf == "Not an ESAF customer")
+    then
+        Ops.calc(out, 0.0d, 20.0d, Ops.BORROWER_CHARC);
+        
+end
+
+
+rule "PLVehicle - Year of stay in current address >5 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_present_home_address_years == "long")
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Year of stay in current address >3 years and <=5 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_present_home_address_years == "medium")
+    then
+        Ops.calc(out, 8.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Year of stay in current address >1 years and <=2 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_present_home_address_years == "short")
+    then
+        Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Year of stay in current address <1 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_present_home_address_years == "very_short")
+    then
+        Ops.calc(out, 2.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Occupation/Business Groups - Salaried"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(business_group == "Salaried")
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Occupation/Business Groups - Return NRI"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(business_group == "Return NRI")
+    then
+        Ops.calc(out, 9.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Occupation/Business Groups - Owner of MSME’s"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(business_group == "Owner of MSME’s")
+    then
+        Ops.calc(out, 8.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Occupation/Business Groups - Self employed professionals"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(business_group == "Self employed professionals")
+    then
+        Ops.calc(out, 6.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Occupation/Business Groups - Blue Collar NRI"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(business_group == "Blue Collar NRI")
+    then
+        Ops.calc(out, 5.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Occupation/Business Groups - Others"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(business_group == "Others")
+    then
+        Ops.calc(out, 2.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+
+rule "PLVehicle - Years of stay in current address - >5 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "very_long")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Years of stay in current address - >3 years and <=5 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "long")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Years of stay in current address - >=2 years and <=3 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "medium")
+    then
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Years of stay in current address - >=1 years and <2 years"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "short")
+    then
+        Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Years of stay in current address - Less than 1 yr"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "very_short")
+    then
+        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - Available and not pledged"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "Available and not pledged")
+    then
+        Ops.calc(out, 10.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - Own Vacant Land available"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "Own Vacant Land available")
+    then
+        Ops.calc(out, 9.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - Own house , pledged, Repaid promptly"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "Own house , pledged, Repaid promptly")
+    then
+        Ops.calc(out, 8.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - Own house , pledged, Repaid occassionaly"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "Own house , pledged, Repaid occassionaly")
+    then
+        Ops.calc(out, 7.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - Staying in family House, title deed not pledged"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "Staying in family House, title deed not pledged")
+    then
+        Ops.calc(out, 6.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - Staying in family House, title deed pledged"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "Staying in family House, title deed pledged")
+    then
+        Ops.calc(out, 5.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - No repayment"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "No repayment")
+    then
+        Ops.calc(out, 4.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - Staying in rental, family share available"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "Staying in rental, family share available")
+    then
+        Ops.calc(out, 3.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - Own house available for pledging - No own / family house, staying on rent"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(house_pledging == "No own / family house, staying on rent")
+    then
+        Ops.calc(out, 0.0d, 15.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "PLVehicle - FOIR - Less than 55%"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(foir < 55)
+    then
+        Ops.calc(out, 10.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "PLVehicle - FOIR - >=55% to <65%"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(foir >= 55 && foir < 65)
+    then
+        Ops.calc(out, 8.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "PLVehicle - FOIR - >=65% to <75%"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(foir >= 65 && foir < 75)
+    then
+        Ops.calc(out, 6.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "PLVehicle - FOIR - >=75% to <85%"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(foir >= 75 && foir < 85)
+    then
+        Ops.calc(out, 4.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "PLVehicle - FOIR - more than or equal to 85%"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(foir >= 85)
+    then
+        Ops.calc(out, 2.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "PLVehicle - Credit history of the borrower - No Default history (Accounts running regular)"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(borrower_history == "No Default history (Accounts running regular)")
+    then
+        Ops.calc(out, 10.0d, 20.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "PLVehicle - Credit history of the borrower - Occasional Defaults"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(borrower_history == "Occasional Defaults")
+    then
+        Ops.calc(out, 7.0d, 20.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "PLVehicle - Credit history of the borrower - No Credit History"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(borrower_history == "No Credit History")
+    then
+        Ops.calc(out, 5.0d, 20.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "PLVehicle - Credit history of the borrower - Frequent Defaults"
+ruleflow-group "pl_vehicle"
+
+    when
+        $tile : TileView(borrower_history == "Frequent Defaults")
+    then
+        Ops.calc(out, -10.0d, 20.0d, Ops.TRANSACTL_CHARC);
+        
+end
