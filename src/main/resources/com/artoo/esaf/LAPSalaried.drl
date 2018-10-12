@@ -157,3 +157,195 @@ ruleflow-group "lap_salaried"
 end
 
 
+rule "LAPSalaried - Years of stay in current address - >5 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "very_long")
+    then
+        Ops.calc(out, 10.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Years of stay in current address - >3 years and <=5 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "long")
+    then
+        Ops.calc(out, 8.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Years of stay in current address - >=2 years and <=3 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "medium")
+    then
+        Ops.calc(out, 6.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Years of stay in current address - >=1 years and <2 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "short")
+    then
+        Ops.calc(out, 4.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Years of stay in current address - Less than 1 yr"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(person_applicant_years_of_experience == "very_short")
+    then
+        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - Available and not pledged"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "Available and not pledged")
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - Own Vacant Land available"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "Own Vacant Land available")
+    then
+        Ops.calc(out, 9.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - Own house , pledged, Repaid promptly"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "Own house , pledged, Repaid promptly")
+    then
+        Ops.calc(out, 8.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - Own house , pledged, Repaid occassionaly"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "Own house , pledged, Repaid occassionaly")
+    then
+        Ops.calc(out, 7.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - Staying in family House, title deed not pledged"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "Staying in family House, title deed not pledged")
+    then
+        Ops.calc(out, 6.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - Staying in family House, title deed pledged"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "Staying in family House, title deed pledged")
+    then
+        Ops.calc(out, 5.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - No repayment"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "No repayment")
+    then
+        Ops.calc(out, 4.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - Staying in rental, family share available"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "Staying in rental, family share available")
+    then
+        Ops.calc(out, 3.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - Own house available for pledging - No own / family house, staying on rent"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(house_pledging == "No own / family house, staying on rent")
+    then
+        Ops.calc(out, 0.0d, 10.0d, Ops.BORROWER_CHARC);
+        
+end
+
+rule "LAPSalaried - FOIR - Less than 55%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(foir < 55)
+    then
+        Ops.calc(out, 10.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSalaried - FOIR - >=55% to <65%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(foir >= 55 && foir < 65)
+    then
+        Ops.calc(out, 8.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSalaried - FOIR - >=65% to <75%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(foir >= 65 && foir < 75)
+    then
+        Ops.calc(out, 6.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSalaried - FOIR - >=75% to <85%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(foir >= 75 && foir < 85)
+    then
+        Ops.calc(out, 4.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+rule "LAPSalaried - FOIR - more than or equal to 85%"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(foir >= 85)
+    then
+        Ops.calc(out, 2.0d, 20.0d, Ops.FINANCIAL_CHARC);
+        
+end
+
+
+
