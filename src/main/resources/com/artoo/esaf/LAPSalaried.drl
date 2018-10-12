@@ -347,5 +347,123 @@ ruleflow-group "lap_salaried"
         
 end
 
+rule "LAPSalaried - Credit history of the borrower - No Default history (Accounts running regular)"
+ruleflow-group "lap_salaried"
 
+    when
+        $tile : TileView(borrower_history == "No Default history (Accounts running regular)")
+    then
+        Ops.calc(out, 10.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSalaried - Credit history of the borrower - Occasional Defaults"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(borrower_history == "Occasional Defaults")
+    then
+        Ops.calc(out, 7.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSalaried - Credit history of the borrower - No Credit History"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(borrower_history == "No Credit History")
+    then
+        Ops.calc(out, 5.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSalaried - Credit history of the borrower - Frequent Defaults"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(borrower_history == "Frequent Defaults")
+    then
+        Ops.calc(out, 0.0d, 10.0d, Ops.TRANSACTL_CHARC);
+        
+end
+
+rule "LAPSalaried - Property Value - Property has appreciated in last 3 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(property_value == "Property has appreciated in last 3 years")
+    then
+        Ops.calc(out, 10.0d, 6.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Property Value - Property has not appreciated in last 3 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(property_value == "Property has not appreciated in last 3 years")
+    then
+        Ops.calc(out, 4.0d, 6.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Property Value - Property has depreciated in last 3 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(property_value == "Property has depreciated in last 3 years")
+    then
+        Ops.calc(out, -2.0d, 6.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Age of building - Less than 1 year/new construction"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(collateral_asset_age < 1)
+    then
+        Ops.calc(out, 10.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Age of building - >=1 or <5 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(collateral_asset_age >= 1 && collateral_asset_age <5)
+    then
+        Ops.calc(out, 8.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Age of building - >=5 or <10 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(collateral_asset_age >= 5 && collateral_asset_age <10)
+    then
+        Ops.calc(out, 6.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Age of building - >=10 or <15 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(collateral_asset_age >= 10 && collateral_asset_age <15)
+    then
+        Ops.calc(out, 4.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
+
+rule "LAPSalaried - Age of building - >=15 years"
+ruleflow-group "lap_salaried"
+
+    when
+        $tile : TileView(collateral_asset_age >= 15)
+    then
+        Ops.calc(out, 2.0d, 7.0d, Ops.PROPERTY_CHARC);
+        
+end
 
