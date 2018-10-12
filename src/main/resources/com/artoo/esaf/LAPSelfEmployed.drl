@@ -51,7 +51,7 @@ ruleflow-group "lap_self_employed"
     when
         $tile : TileView(vintage_esaf == "Not an ESAF customer")
     then
-        Ops.calc(out, 2.0d, 5.0d, Ops.BORROWER_CHARC);
+        Ops.calc(out, 0.0d, 5.0d, Ops.BORROWER_CHARC);
         
 end
 
