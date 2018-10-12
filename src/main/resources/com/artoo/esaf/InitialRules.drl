@@ -45,7 +45,7 @@ ruleflow-group "tiling"
     then
         $tile.setLoan_type($loan.getType());
         $tile.setCollateral_asset_age($building_asset.getAge());
-        $tile.setCollateral_asset_type($building_asset.getArea_type());
+        $tile.setCollateral_asset_type($building_asset.getStatus());
         $tile.setPerson_applicant_present_home_address_years($pa_address_details.getYears_at_address());
         $tile.setPerson_applicant_years_of_experience($pa_employment_details.getDuration());
         $tile.setVintage_esaf($vintage_esaf.getValue());
