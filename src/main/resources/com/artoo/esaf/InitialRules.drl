@@ -57,7 +57,7 @@ ruleflow-group "tiling"
         $tile.setProperty_pledged($property_pledged.getValue());
         $tile.setExperience_in_business($ba_profile_extra.getExperience_in_business());
         $tile.setLtv($summary.getAmount_to_asset_value());
-        $tile.setFoir($summary_extra.getFoir());       
+        $tile.setFoir($summary_extra.getFoir()!=null? $summary_extra.getFoir().doubleValue() : 0.0d);       
         update($tile);
         System.out.println($tile.toString());
 end
