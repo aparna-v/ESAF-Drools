@@ -6,6 +6,7 @@ import com.artoo.model.app.*;
 import com.artoo.utils.NetworkCall;
 
 rule "Fetch application details"
+no-loop true
 ruleflow-group "fetch"
     when
         $input: Input()
@@ -21,6 +22,7 @@ ruleflow-group "fetch"
 end
 
 rule "tiling application details"
+no-loop true
 ruleflow-group "tiling"
     when
         $tile: 					TileView()
