@@ -8,7 +8,6 @@ ruleflow-group "finish"
     when
         $app:   App()
     then
-        $app = null;
-        update($app);
+        $app.setEntities(null);
         
 end
