@@ -1,6 +1,7 @@
 package com.artoo.esaf;
 
 import com.artoo.esaf.Input;
+import com.artoo.esaf.Output;
 import com.artoo.esaf.TileView;
 import com.artoo.model.app.*;
 import com.artoo.utils.NetworkCall;
@@ -16,6 +17,7 @@ ruleflow-group "fetch"
 		if(app != null){
 		    insert(app);
 			System.out.println(app.toString());
+			
 		}
     
 end
@@ -64,4 +66,12 @@ ruleflow-group "tiling"
         System.out.println($tile.getLoan_type());
 end
     
+rule "Initialize output object"
+ruleflow-group "tiling"
+    when
+        not Output()
+    then
+        Output out = new Output();
+        
+end
     
