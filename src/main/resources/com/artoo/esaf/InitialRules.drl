@@ -71,7 +71,7 @@ ruleflow-group "tiling"
     when
         not Output()
     then
-        Output out = new Output();
-        
+        Output output = new Output(0d,0d,0d,0d,0d);
+        insert(output);
 end
     
