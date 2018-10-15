@@ -10,13 +10,12 @@ no-loop true
 ruleflow-group "fetch"
     when
         $input: Input()
-        $app: App()
     then
     	String url = "http://10.1.0.11:5984/esaf/" + $input.getDocId();
-		$app = NetworkCall.get(url, App.class);
-		if($app != null){
-		    update($app);
-			System.out.println($app.toString());
+		App app = NetworkCall.get(url, App.class);
+		if(app != null){
+		    insert(app);
+			System.out.println(app.toString());
 		}
     
 end
