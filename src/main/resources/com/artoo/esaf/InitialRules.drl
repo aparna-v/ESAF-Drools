@@ -66,12 +66,3 @@ ruleflow-group "tiling"
         System.out.println($tile.getLoan_type());
 end
     
-rule "Initialize output object"
-ruleflow-group "tiling"
-    when
-        not Output()
-    then
-        Output output = new Output(0d,0d,0d,0d,0d);
-        insert(output);
-end
-    
