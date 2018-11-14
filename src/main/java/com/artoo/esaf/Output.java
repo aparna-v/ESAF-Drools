@@ -8,15 +8,15 @@ public class Output implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "overall_score")
+	@org.kie.api.definition.type.Label("Overall Score")
 	private java.lang.Double overall_score;
-	@org.kie.api.definition.type.Label(value = "borrower_charc")
+	@org.kie.api.definition.type.Label("Borrower Characteristics")
 	private java.lang.Double borrower_charc;
-	@org.kie.api.definition.type.Label(value = "financial_charc")
+	@org.kie.api.definition.type.Label("Financial Characteristics")
 	private java.lang.Double financial_charc;
-	@org.kie.api.definition.type.Label(value = "transactional_charc")
+	@org.kie.api.definition.type.Label("Transactional Characteristics")
 	private java.lang.Double transactional_charc;
-	@org.kie.api.definition.type.Label(value = "property_charac")
+	@org.kie.api.definition.type.Label("Property Characteristics")
 	private java.lang.Double property_charac;
 
 	public Output() {
