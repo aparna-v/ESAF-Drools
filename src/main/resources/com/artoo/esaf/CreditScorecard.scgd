@@ -26,6 +26,24 @@
           <reasonCode></reasonCode>
           <operator>=</operator>
         </org.drools.workbench.models.guided.scorecard.shared.Attribute>
+        <org.drools.workbench.models.guided.scorecard.shared.Attribute>
+          <value>2 to 5 years</value>
+          <partialScore>6.0</partialScore>
+          <reasonCode></reasonCode>
+          <operator>=</operator>
+        </org.drools.workbench.models.guided.scorecard.shared.Attribute>
+        <org.drools.workbench.models.guided.scorecard.shared.Attribute>
+          <value>Less than 2 years</value>
+          <partialScore>4.0</partialScore>
+          <reasonCode></reasonCode>
+          <operator>=</operator>
+        </org.drools.workbench.models.guided.scorecard.shared.Attribute>
+        <org.drools.workbench.models.guided.scorecard.shared.Attribute>
+          <value>Not an ESAF customer</value>
+          <partialScore>0.0</partialScore>
+          <reasonCode></reasonCode>
+          <operator>=</operator>
+        </org.drools.workbench.models.guided.scorecard.shared.Attribute>
       </attributes>
       <name>Vintage with ESAF</name>
       <dataType>String</dataType>
