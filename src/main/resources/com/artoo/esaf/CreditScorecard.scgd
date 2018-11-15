@@ -72,6 +72,12 @@
           <reasonCode></reasonCode>
           <operator>=</operator>
         </org.drools.workbench.models.guided.scorecard.shared.Attribute>
+        <org.drools.workbench.models.guided.scorecard.shared.Attribute>
+          <value>very_short</value>
+          <partialScore>0.0</partialScore>
+          <reasonCode></reasonCode>
+          <operator>=</operator>
+        </org.drools.workbench.models.guided.scorecard.shared.Attribute>
       </attributes>
       <name>Years of Stay in Address</name>
       <dataType>String</dataType>
