@@ -21,7 +21,7 @@
           <operator>=</operator>
         </org.drools.workbench.models.guided.scorecard.shared.Attribute>
       </attributes>
-      <name></name>
+      <name>Vintage with ESAF</name>
       <dataType>String</dataType>
     </org.drools.workbench.models.guided.scorecard.shared.Characteristic>
   </characteristics>
