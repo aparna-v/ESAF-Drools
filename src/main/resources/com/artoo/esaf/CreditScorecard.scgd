@@ -60,6 +60,18 @@
           <reasonCode></reasonCode>
           <operator>=</operator>
         </org.drools.workbench.models.guided.scorecard.shared.Attribute>
+        <org.drools.workbench.models.guided.scorecard.shared.Attribute>
+          <value>medium</value>
+          <partialScore>8.0</partialScore>
+          <reasonCode></reasonCode>
+          <operator>=</operator>
+        </org.drools.workbench.models.guided.scorecard.shared.Attribute>
+        <org.drools.workbench.models.guided.scorecard.shared.Attribute>
+          <value>short</value>
+          <partialScore>4.0</partialScore>
+          <reasonCode></reasonCode>
+          <operator>=</operator>
+        </org.drools.workbench.models.guided.scorecard.shared.Attribute>
       </attributes>
       <name>Years of Stay in Address</name>
       <dataType>String</dataType>
