@@ -48,6 +48,22 @@
       <name>Vintage with ESAF</name>
       <dataType>String</dataType>
     </org.drools.workbench.models.guided.scorecard.shared.Characteristic>
+    <org.drools.workbench.models.guided.scorecard.shared.Characteristic>
+      <fact>TileView</fact>
+      <field>person_applicant_present_home_address_years</field>
+      <baselineScore>0.0</baselineScore>
+      <reasonCode></reasonCode>
+      <attributes>
+        <org.drools.workbench.models.guided.scorecard.shared.Attribute>
+          <value>long</value>
+          <partialScore>10.0</partialScore>
+          <reasonCode></reasonCode>
+          <operator>=</operator>
+        </org.drools.workbench.models.guided.scorecard.shared.Attribute>
+      </attributes>
+      <name>Years of Stay in Address</name>
+      <dataType>String</dataType>
+    </org.drools.workbench.models.guided.scorecard.shared.Characteristic>
   </characteristics>
   <packageName>com.artoo.esaf</packageName>
   <imports>
