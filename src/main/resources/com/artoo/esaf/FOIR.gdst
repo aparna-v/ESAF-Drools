@@ -24,7 +24,7 @@
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>Occupation</header>
+          <header>FOIR</header>
           <constraintValueType>1</constraintValueType>
           <factField>business_group</factField>
           <fieldType>String</fieldType>
@@ -50,7 +50,7 @@
       <width>100</width>
       <header>Score</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p6</boundName>
+      <boundName>p7</boundName>
       <factField>score</factField>
       <type>Double</type>
       <isInsertLogical>false</isInsertLogical>
@@ -65,7 +65,7 @@
       <width>100</width>
       <header>Color Code</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p6</boundName>
+      <boundName>p7</boundName>
       <factField>color_code</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -80,7 +80,7 @@
       <width>100</width>
       <header>Value</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p6</boundName>
+      <boundName>p7</boundName>
       <factField>actual_value</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -95,7 +95,7 @@
       <width>100</width>
       <header>Name</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p6</boundName>
+      <boundName>p7</boundName>
       <factField>parameter_name</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -110,7 +110,7 @@
       <width>100</width>
       <header>Description</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p6</boundName>
+      <boundName>p7</boundName>
       <factField>parameter_description</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -168,28 +168,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">2.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#b2ff66</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Less than 50%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -212,28 +211,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">1.6</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#ffda66</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than &amp; equal to 50% and upto 60%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -256,28 +254,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">1.2</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#ffda66</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than &amp; equal to 60% and upto 75%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -300,28 +297,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">0.8</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#ffda66</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than &amp; equal to 75% and upto 85%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -344,28 +340,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">0.4</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#ff6666</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than 85%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
