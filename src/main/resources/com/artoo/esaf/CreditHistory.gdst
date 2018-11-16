@@ -50,7 +50,7 @@
       <width>100</width>
       <header>Score</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p7</boundName>
+      <boundName>p8</boundName>
       <factField>score</factField>
       <type>Double</type>
       <isInsertLogical>false</isInsertLogical>
@@ -65,7 +65,7 @@
       <width>100</width>
       <header>Color Code</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p7</boundName>
+      <boundName>p8</boundName>
       <factField>color_code</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -80,7 +80,7 @@
       <width>100</width>
       <header>Value</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p7</boundName>
+      <boundName>p8</boundName>
       <factField>actual_value</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -95,7 +95,7 @@
       <width>100</width>
       <header>Name</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p7</boundName>
+      <boundName>p8</boundName>
       <factField>parameter_name</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -110,7 +110,7 @@
       <width>100</width>
       <header>Description</header>
       <factType>CreditScoringParameter</factType>
-      <boundName>p7</boundName>
+      <boundName>p8</boundName>
       <factField>parameter_description</factField>
       <type>String</type>
       <isInsertLogical>false</isInsertLogical>
@@ -168,28 +168,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">2.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#b2ff66</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>No Default history (Accounts running regular)</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -212,28 +211,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">1.4</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#ffda66</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occasional Defaults </valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -256,28 +254,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">1.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#ffda66</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>No Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -300,28 +297,27 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">-2.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>#ff6666</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Frequent Defaults</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
