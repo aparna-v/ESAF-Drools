@@ -1,5 +1,5 @@
 <decision-table52>
-  <tableName>BorrowerDecisionTable</tableName>
+  <tableName>VintageWithESAF</tableName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
     <width>50</width>
