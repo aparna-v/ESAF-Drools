@@ -174,7 +174,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>#b2ff66</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -184,12 +184,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Bu</valueString>
+        <valueString>Occupation /Business Groups</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>Occupation /Business Groups</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
