@@ -6,12 +6,49 @@ package com.artoo.esaf;
 
 public class CreditScorecard implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public CreditScorecard() {
-    }
+	@org.kie.api.definition.type.Label(value = "Overall Score")
+	private java.lang.Double overall_score;
+	@org.kie.api.definition.type.Label(value = "Color Code")
+	private java.lang.Double color_code;
+	@org.kie.api.definition.type.Label(value = "Sections")
+	private java.util.List<com.artoo.esaf.CreditScoreSection> sections;
 
+	public CreditScorecard() {
+	}
 
+	public java.lang.Double getOverall_score() {
+		return this.overall_score;
+	}
 
+	public void setOverall_score(java.lang.Double overall_score) {
+		this.overall_score = overall_score;
+	}
+
+	public java.lang.Double getColor_code() {
+		return this.color_code;
+	}
+
+	public void setColor_code(java.lang.Double color_code) {
+		this.color_code = color_code;
+	}
+
+	public java.util.List<com.artoo.esaf.CreditScoreSection> getSections() {
+		return this.sections;
+	}
+
+	public void setSections(
+			java.util.List<com.artoo.esaf.CreditScoreSection> sections) {
+		this.sections = sections;
+	}
+
+	public CreditScorecard(java.lang.Double overall_score,
+			java.lang.Double color_code,
+			java.util.List<com.artoo.esaf.CreditScoreSection> sections) {
+		this.overall_score = overall_score;
+		this.color_code = color_code;
+		this.sections = sections;
+	}
 
 }
