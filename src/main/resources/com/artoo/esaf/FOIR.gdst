@@ -153,6 +153,7 @@
     <list>
       <value>
         <valueNumeric class="int">1</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -162,12 +163,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Return NRI</valueString>
+        <valueString>Less than 50%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">0.45</valueNumeric>
+        <valueNumeric class="double">2.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
@@ -178,17 +179,17 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Return NRI</valueString>
+        <valueString>Less than 50%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -196,6 +197,7 @@
     <list>
       <value>
         <valueNumeric class="int">2</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -205,12 +207,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Owner of MSME’s</valueString>
+        <valueString>More than &amp; equal to 50% and upto 60%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">0.4</valueNumeric>
+        <valueNumeric class="double">1.6</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
@@ -221,17 +223,17 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Owner of MSME’s</valueString>
+        <valueString>More than &amp; equal to 50% and upto 60%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -239,6 +241,7 @@
     <list>
       <value>
         <valueNumeric class="int">3</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -248,12 +251,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Self employed professionals</valueString>
+        <valueString>More than &amp; equal to 60% and upto 75%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">0.4</valueNumeric>
+        <valueNumeric class="double">1.2</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
@@ -264,17 +267,17 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Self employed professionals</valueString>
+        <valueString>More than &amp; equal to 60% and upto 75%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -282,6 +285,7 @@
     <list>
       <value>
         <valueNumeric class="int">4</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -291,12 +295,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Daily Wage</valueString>
+        <valueString>More than &amp; equal to 75% and upto 85%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">0.25</valueNumeric>
+        <valueNumeric class="double">0.8</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
@@ -307,17 +311,17 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Daily Wage</valueString>
+        <valueString>More than &amp; equal to 75% and upto 85%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -325,6 +329,7 @@
     <list>
       <value>
         <valueNumeric class="int">5</valueNumeric>
+        <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -334,12 +339,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Others</valueString>
+        <valueString>More than 85%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="double">0.2</valueNumeric>
+        <valueNumeric class="double">0.0</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_DOUBLE</dataType>
         <isOtherwise>false</isOtherwise>
@@ -350,17 +355,17 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Others</valueString>
+        <valueString>More than 85%</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occupation /Business Groups</valueString>
+        <valueString>FOIR [Existing+Proposed EMI] to Net  Income Ratio)</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
