@@ -6,12 +6,70 @@ package com.artoo.esaf;
 
 public class CreditScoringParameter implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public CreditScoringParameter() {
-    }
+	@org.kie.api.definition.type.Label(value = "Parameter Name")
+	private java.lang.String parameter_name;
+	@org.kie.api.definition.type.Label(value = "Parameter Description")
+	private java.lang.String parameter_description;
+	@org.kie.api.definition.type.Label(value = "Score")
+	private java.lang.Double score;
+	@org.kie.api.definition.type.Label(value = "Color Code")
+	private java.lang.String color_code;
+	@org.kie.api.definition.type.Label(value = "Actual Value")
+	private java.lang.String actual_value;
 
+	public CreditScoringParameter() {
+	}
 
+	public java.lang.String getParameter_name() {
+		return this.parameter_name;
+	}
 
+	public void setParameter_name(java.lang.String parameter_name) {
+		this.parameter_name = parameter_name;
+	}
+
+	public java.lang.String getParameter_description() {
+		return this.parameter_description;
+	}
+
+	public void setParameter_description(java.lang.String parameter_description) {
+		this.parameter_description = parameter_description;
+	}
+
+	public java.lang.Double getScore() {
+		return this.score;
+	}
+
+	public void setScore(java.lang.Double score) {
+		this.score = score;
+	}
+
+	public java.lang.String getColor_code() {
+		return this.color_code;
+	}
+
+	public void setColor_code(java.lang.String color_code) {
+		this.color_code = color_code;
+	}
+
+	public java.lang.String getActual_value() {
+		return this.actual_value;
+	}
+
+	public void setActual_value(java.lang.String actual_value) {
+		this.actual_value = actual_value;
+	}
+
+	public CreditScoringParameter(java.lang.String parameter_name,
+			java.lang.String parameter_description, java.lang.Double score,
+			java.lang.String color_code, java.lang.String actual_value) {
+		this.parameter_name = parameter_name;
+		this.parameter_description = parameter_description;
+		this.score = score;
+		this.color_code = color_code;
+		this.actual_value = actual_value;
+	}
 
 }
