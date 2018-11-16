@@ -19,16 +19,16 @@
         <condition-column52>
           <typedDefaultValue>
             <valueString></valueString>
-            <dataType>STRING</dataType>
+            <dataType>NUMERIC_DOUBLE</dataType>
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>FOIR</header>
+          <header>FOIR Less Than</header>
           <constraintValueType>1</constraintValueType>
-          <factField>business_group</factField>
-          <fieldType>String</fieldType>
-          <operator>==</operator>
+          <factField>foir</factField>
+          <fieldType>Double</fieldType>
+          <operator>&lt;</operator>
           <parameters/>
           <binding></binding>
         </condition-column52>
@@ -163,7 +163,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Less than 50%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -206,7 +206,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than &amp; equal to 50% and upto 60%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -249,7 +249,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than &amp; equal to 60% and upto 75%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -292,7 +292,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than &amp; equal to 75% and upto 85%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -335,7 +335,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than 85%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
