@@ -6,12 +6,36 @@ package com.artoo.esaf;
 
 public class BorrowerCharcSal implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public BorrowerCharcSal() {
-    }
+	@org.kie.api.definition.type.Label(value = "Section Score")
+	private java.lang.Double section_score;
+	@org.kie.api.definition.type.Label(value = "Section Name")
+	private java.lang.String section_name;
 
+	public BorrowerCharcSal() {
+	}
 
+	public java.lang.Double getSection_score() {
+		return this.section_score;
+	}
 
+	public void setSection_score(java.lang.Double section_score) {
+		this.section_score = section_score;
+	}
+
+	public java.lang.String getSection_name() {
+		return this.section_name;
+	}
+
+	public void setSection_name(java.lang.String section_name) {
+		this.section_name = section_name;
+	}
+
+	public BorrowerCharcSal(java.lang.Double section_score,
+			java.lang.String section_name) {
+		this.section_score = section_score;
+		this.section_name = section_name;
+	}
 
 }
