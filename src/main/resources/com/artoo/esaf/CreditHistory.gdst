@@ -24,9 +24,9 @@
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>FOIR</header>
+          <header>Credit History</header>
           <constraintValueType>1</constraintValueType>
-          <factField>business_group</factField>
+          <factField>borrower_history</factField>
           <fieldType>String</fieldType>
           <operator>==</operator>
           <parameters/>
@@ -163,7 +163,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>No Default history (Accounts running regular)</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -206,7 +206,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Occasional Defaults</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -249,7 +249,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>No Credit History</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -292,7 +292,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Frequent Defaults</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -335,7 +335,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>More than 85%</valueString>
+        <valueString></valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
