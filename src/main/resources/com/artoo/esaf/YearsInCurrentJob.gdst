@@ -163,7 +163,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>very_long</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -179,7 +179,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&gt;5 years</valueString>
+        <valueString>very_long</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -207,7 +207,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>long</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -223,7 +223,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&gt;3 years and &lt;=5 years</valueString>
+        <valueString>long</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -251,7 +251,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>medium</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -267,7 +267,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&gt;2 years and &lt;=3 years</valueString>
+        <valueString>medium</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -295,7 +295,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>short</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -311,7 +311,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&gt;1 years and &lt;=2 years</valueString>
+        <valueString>short</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -339,7 +339,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString></valueString>
+        <valueString>very_short</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -355,7 +355,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Less than 1 yr</valueString>
+        <valueString>very_short</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
